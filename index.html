@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Otonomic Site Wizard</title>
+
+    <link rel="stylesheet" href="dist/css/bootstrap.css" />
+    <link rel='stylesheet' id='icon-font-css-css' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css' type='text/css' media='all' />
+    <link rel="stylesheet" href="dist/css/main.css" />
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="dist/js/bootstrap.js"></script>
+
+    <link rel="import" href="dist/html/basic.html" title="#basic">
+
+    <link rel="import" href="dist/html/services.html" title="#services">
+    <link rel="import" href="dist/html/add-service.html" title="#add-service">
+
+    <link rel="import" href="dist/html/testimonials.html" title="#testimonials">
+    <link rel="import" href="dist/html/add-testimonial.html" title="#add-testimonial">
+
+    <link rel="import" href="dist/html/projects.html" title="#projects">
+    <!--
+-->
+    <style>
+        .stage {
+            margin-bottom:3em;
+        }
+    </style>
+</head>
+<body>
+    <div id="main" class="container">
+        <div class="stage" id="basic"></div>
+
+        <div class="stage" id="services"></div>
+        <div class="stage" id="add-service"></div>
+
+        <div class="stage" id="testimonials"></div>
+        <div class="stage" id="add-testimonial"></div>
+
+        <div class="stage" id="projects"></div>
+    </div>
+
+
+    <script>
+        var link = document.querySelectorAll('link[rel=import]');
+        var content;
+        for(i=0;i<link.length;i++) {
+            content = link[i].import.querySelector('body');
+            document.querySelector(link[i].title).appendChild(document.importNode(content, true));
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+.item__icon {
+  font-size: 3em;
+  text-align: right;
+}
+.item__title {
+  font-weight: bold;
+  font-size: 1.25em;
+}
+.item__subtitle {
+  font-weight: bold;
+}
+.item__image {
+  max-width: 100%;
+}
+.item__galery-image {
+  display: inline-block;
+}
+
+.item__action-buttons {
+  display: block;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: rgba(255,255,255,0.8);
+  padding: 3px;
+}
+/*
+.item:hover .item__action-buttons {
+  display: block;
+}
+*/
+
+.item__add-link {
+  width: 90px;
+  height: 90px;
+  border: 1px dashed #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.item__add-link:hover {
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+
+.project.item.panel {
+  padding: 20px;
+  border: 1px solid #eee;
+  border-collapse: collapse;
+}
